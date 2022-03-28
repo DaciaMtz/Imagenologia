@@ -1,2 +1,2 @@
 # Imagenologia 2
-Procesamiento de imágenes médicas para el diagnóstico
+Curso BI2009B.201 Procesamiento de imágenes médicas para el diagnóstico
