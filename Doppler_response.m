@@ -22,6 +22,8 @@ xlabel('Speed (m/s)');
 ylabel('Range (m)');
 title('Range-Doppler Map');
 
+% The target is approximately 2250 meters away and is moving fast enough to cause a Doppler shift of approximately -0.357422 Hz.
+
 %% Estimate Doppler and range from range-Doppler response.
 
 % Create a range-Doppler response object.
