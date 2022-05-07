@@ -43,10 +43,11 @@ FinalwhiteFSL = imrotate(Resicwfsl,90);
 FinalgreyFSL = imrotate(Resicgfsl,90);
 % Resultados
 % DICE
-diceResultWhite101 = dice(FinalwhiteFreesurf,FinalwhiteFSL)
-diceResultGrey101 = dice(FinalgreyFresurf,FinalgreyFSL)
+diceResultWhite101 = dice(FinalwhiteFreesurf,FinalwhiteFSL) % cálculo de la similitud entre segmentaciones de la materia blanca con FreeSurfer y FSL
+diceResultGrey101 = dice(FinalgreyFresurf,FinalgreyFSL) % cálculo de la similitud entre segmentaciones de la materia gris con FreeSurfer y FSL
 % Mostrar ejemplo de una slice
 n = 130
+% Desplegar las segmentaciones de los dos softwares
 figure
 subplot(2,2,1)
 imshow(FinalwhiteFSL(:,:,n), []);
