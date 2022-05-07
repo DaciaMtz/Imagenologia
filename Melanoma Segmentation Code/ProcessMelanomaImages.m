@@ -1,4 +1,4 @@
-melanomapath ='E:\SKINCCANCER\skin-lesions\train\melanoma\';
+melanomapath ='E:\SKINCCANCER\skin-lesions\train\melanoma\'; %Change path to analize nevus or seborrheic_keratosis images 
 allquantiativeLesionData = [];
 allquantiativeControlData = [];
 

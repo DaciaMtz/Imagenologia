@@ -1,3 +1,4 @@
+
 %% Structural Elements
 filterDisk30 = strel('disk',3);
 filterDisk0 = strel('disk',5);
