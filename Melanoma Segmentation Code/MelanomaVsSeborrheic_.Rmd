@@ -1,4 +1,6 @@
----
+#Actividad en equipo
+#Maxine Annel Pacheco Ramírez A01551933
+#---
 title: "MelanomavsSeborreic"
 author: "Jose Tamez"
 date: "4/9/2021"
