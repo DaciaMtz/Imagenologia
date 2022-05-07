@@ -171,7 +171,7 @@ for channel = 1:3
     compactness = 512*volume/surface^(3/2);
     quantiativeLesionData = [quantiativeLesionData,log(1+volume),log(1+surface),compactness,gradsum/volume,gradsum2/gradsum];
 
-    %%%%%%%%%%%%%%%% Temperature GLCM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%% Temperature GLCM %%%%%%%%%%%%%%%%%%%%%%%%
     glcm_1 = graycomatrix(LesionData(finalmask),'NumLevels',numGLCMBins,'GrayLimits',[-1.0,1.50],'Offset',[0 2; -2 2; -2 0; -2 -2],'Symmetric',true);
     glcm_2 = graycomatrix(LesionData(finalmask),'NumLevels',numGLCMBins,'GrayLimits',[-1.0,1.50],'Offset',[0 4; -3 3; -4 0; -3 -3],'Symmetric',true);
     glcm_3 = graycomatrix(LesionData(finalmask),'NumLevels',numGLCMBins,'GrayLimits',[-1.0,1.50],'Offset',[0 8; -6 6; -8 0; -6 -6],'Symmetric',true);
@@ -359,7 +359,6 @@ for channel = 1:3
 
 
 end
-
 
 
 allquantiativeControlData = [allquantiativeControlData;quantiativeControlData];
