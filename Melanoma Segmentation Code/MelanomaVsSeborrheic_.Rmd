@@ -151,6 +151,7 @@ table(MelanomaSeborrheicNevus$Class)
 
 ```
 ## The Heatmap
+## se crea un heatmap para observar si aparece un patrón o clusters en la clasificación por etiquetas de los datos
 ```{r, dpi=300, fig.height= 6.0, fig.width= 8.0}
 par(op)
 
@@ -168,9 +169,9 @@ par(op)
 ```{r}
 cvKNN <- randomCV(MelanomaSeborrheicNevus,"Class",
                KNN_method,
-               trainFraction = 0.70,
-               repetitions = 100,
-               classSamplingType = "Ba",
+               trainFraction = 0.70, ## la red entrena con el 70% de los datos y prueba con 30%
+               repetitions = 100, ## se repite 100 veces el proceso de entrenamiento y prueba
+               classSamplingType = "Ba", ## el tipo de muestreo es balanceado
                featureSelectionFunction = univariate_KS,
                featureSelection.control = list(pvalue=0.05,limit= -1),
                kn=5
@@ -188,9 +189,9 @@ par(op)
 cvSVM <- randomCV(MelanomaSeborrheicNevus,"Class",
                e1071::svm,
                asFactor = TRUE,
-               trainFraction = 0.70,
-               repetitions = 100,
-               classSamplingType = "Ba",
+               trainFraction = 0.70, ## se entrena con 70% de los datos y se prueba con 30% (esto se puede modificar para mejorar la sensibilidad y especificidad)
+               repetitions = 100, ## se repite 100 veces el entrenamiento y la prueba
+               classSamplingType = "Ba", ## el tipo de muestreo es balanceado
                featureSelectionFunction = univariate_KS,
                featureSelection.control = list(pvalue=0.05,limit= -1),
                probability=TRUE
@@ -207,9 +208,9 @@ par(op)
 ```{r}
 cvNB <- randomCV(MelanomaSeborrheicNevus,"Class",
                NAIVE_BAYES,
-               trainFraction = 0.70,
-               repetitions = 100,
-               classSamplingType = "Ba",
+               trainFraction = 0.70, ## se entrena con 70% y se prueba con 30%
+               repetitions = 100, ## se repite 100 veces
+               classSamplingType = "Ba", ## se hace un muestreo balanceado
                featureSelectionFunction = univariate_KS,
                featureSelection.control = list(pvalue=0.05,limit=0.1),
 #               pca=FALSE
@@ -226,9 +227,9 @@ par(op)
 ```{r}
 cvADA <- randomCV(MelanomaSeborrheicNevus,"Class",
                adaboost,
-               trainFraction = 0.70, 
-               repetitions = 100,
-               classSamplingType = "Ba",
+               trainFraction = 0.70, ## se entrena con 70% y se prueba con 30%
+               repetitions = 100, # se respite 100 veces el proceso 
+               classSamplingType = "Ba", ## tipo de muestreo balanceado
                nIter=50)
 
 ```
@@ -242,9 +243,9 @@ par(op)
 cvgbm <- randomCV(MelanomaSeborrheicNevus,"Class",
                train,
                asFactor = TRUE,
-               trainFraction = 0.70, 
-               repetitions = 100,
-               classSamplingType = "Ba",
+               trainFraction = 0.70, ## se entrena con un 70% de los datos y se entrena con el otro 30%
+               repetitions = 100, ## el proceso de entrenamiento y prueba se repite 100 veces
+               classSamplingType = "Ba", ## se utiliza un muestreo balanceado
                method = "gbm",  
                trControl = tunningctrl,
 #               preProc = c("center", "scale"),
