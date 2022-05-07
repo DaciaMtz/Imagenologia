@@ -1,3 +1,6 @@
+
+%AnnelP
+%Código para la segmentación de las imágenes de paciente seborrheico
 melanomapath ='D:\MATLAB\SKINCCANCER\skin-lesions\train\seborrheic_keratosisClean\';
 allquantiativeLesionData = [];
 allquantiativeControlData = [];
