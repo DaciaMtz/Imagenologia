@@ -1,3 +1,5 @@
+%AnnelP
+%Código para la segmentación de las imágenes con melanoma 
 melanomapath ='D:\MATLAB\SKINCCANCER\skin-lesions\train\melanoma\'; 
 allquantiativeLesionData = [];
 allquantiativeControlData = [];
