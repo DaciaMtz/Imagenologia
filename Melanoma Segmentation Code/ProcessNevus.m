@@ -1,3 +1,5 @@
+%AnnelP
+%Código para la segmentación de las imágenes con nevus 
 melanomapath ='D:\MATLAB\SKINCCANCER\skin-lesions\train\nevus\';
 allquantiativeLesionData = [];
 allquantiativeControlData = [];
